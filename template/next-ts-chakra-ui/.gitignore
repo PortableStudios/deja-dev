@@ -1,0 +1,11 @@
+node_modules
+.next
+.idea
+.env
+out
+storybook-static
+__screenshots__
+coverage
+.terraform
+*.tfstate*
+dist
