@@ -4,14 +4,20 @@ import type { FlexProps } from '@chakra-ui/core';
 
 import { Page } from '@/components/layout';
 
-type Props = FlexProps;
+type Props = {
+  timestamp: number;
+} & FlexProps;
 
-const Home: React.FC<Props> = ({ children, ...rest }) => {
+const Home: React.FC<Props> = ({ timestamp, children, ...rest }) => {
+  const date = new Date(timestamp).toLocaleString();
   return (
     <Page {...rest}>
       <Stack marginX="auto" padding={4} spacing={4}>
         <Heading as="h1" fontSize={['2xl', '3xl']}>
           Lorem ipsum
+        </Heading>
+        <Heading as="h2" fontSize={['lg', 'xl']}>
+          This page was server-generated at {date}.
         </Heading>
         <Stack fontSize={['sm', 'md']} spacing={2}>
           <Text>
