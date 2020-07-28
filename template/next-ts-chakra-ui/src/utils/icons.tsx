@@ -1,6 +1,8 @@
 import React from 'react';
 
 // Custom icons for Chakra UI theme
+// Tip: Convert from SVG to JSX using https://transform.tools/
+// https://chakra-ui.com/icon#adding-custom-icons
 export default {
   facebook: {
     path: (
