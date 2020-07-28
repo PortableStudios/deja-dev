@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import { Flex, Stack } from '@chakra-ui/core';
 
 import Button from './Button';
@@ -8,11 +8,6 @@ import Button from './Button';
 export default {
   title: 'UI/Button',
   component: Button,
-  decorators: [
-    withKnobs({
-      escapeHTML: false,
-    }),
-  ],
 };
 
 const onClick = action('click');

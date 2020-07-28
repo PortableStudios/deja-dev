@@ -1,12 +1,11 @@
 import React from 'react';
-import { withKnobs, number } from '@storybook/addon-knobs';
+import { number } from '@storybook/addon-knobs';
 
 import Home from './Home';
 
 export default {
   title: 'Pages',
   component: Home,
-  decorators: [withKnobs],
   parameters: {
     screenshot: {
       skip: false,

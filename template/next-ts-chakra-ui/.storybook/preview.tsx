@@ -1,5 +1,6 @@
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
 import { withA11y } from '@storybook/addon-a11y';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withScreenshot } from 'storycap';
@@ -12,6 +13,11 @@ addDecorator((storyFn) => (
     <AppProvider>{storyFn()}</AppProvider>
   </MockRouterProvider>
 ));
+addDecorator(
+  withKnobs({
+    escapeHTML: false,
+  })
+);
 addDecorator(withA11y);
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 addDecorator(withScreenshot as () => any);
