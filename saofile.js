@@ -76,10 +76,10 @@ module.exports = {
         files: 'package.json',
         handler(data) {
           return {
-            ...data,
             name: meta.name,
             description: meta.description,
             author: `<${meta.author}>`,
+            ...data,
           };
         },
       },
