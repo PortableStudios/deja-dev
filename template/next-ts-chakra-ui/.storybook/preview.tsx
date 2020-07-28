@@ -5,8 +5,13 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withScreenshot } from 'storycap';
 
 import AppProvider from '@/components/AppProvider';
+import MockRouterProvider from '@/utils/testing/MockRouterProvider';
 
-addDecorator((storyFn) => <AppProvider>{storyFn()}</AppProvider>);
+addDecorator((storyFn) => (
+  <MockRouterProvider>
+    <AppProvider>{storyFn()}</AppProvider>
+  </MockRouterProvider>
+));
 addDecorator(withA11y);
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 addDecorator(withScreenshot as () => any);

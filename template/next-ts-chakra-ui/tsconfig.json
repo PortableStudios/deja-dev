@@ -27,5 +27,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": [".storybook/**/*", "pages/**/*", "src/**/*", "next-env.d.ts"]
+  "include": [".storybook/**/*", "pages/**/*", "src/**/*", "next-env.d.ts"],
+  "exclude": ["node_modules"]
 }
