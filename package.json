@@ -1,13 +1,16 @@
 {
-  "name": "sao-deja-dev",
+  "name": "deja-dev",
   "version": "0.0.0",
   "description": "We&#39;ve been here before, let&#39;s save some time shall we?",
+  "author": "Lee Briggs <lee@portable.com.au> (github.com/theleebriggs)",
+  "contributors": [
+    "Lee Briggs <lee@portable.com.au> (github.com/theleebriggs)",
+    "Darcy Glennen <darcy@portable.com.au> (github.com/spykr)"
+  ],
   "repository": {
-    "url": "theleebriggs/sao-deja-dev",
-    "type": "git"
+    "type": "git",
+    "url": "PortableStudios/deja-dev"
   },
-  "author": "theleebriggs <coffeegunshow@gmail.com> (github.com/theleebriggs)",
-  "license": "MIT",
   "files": [
     "saofile.js",
     "template"
