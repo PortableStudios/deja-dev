@@ -5,7 +5,7 @@ import * as Sentry from '@sentry/node';
 import type { AppProps } from 'next/app';
 
 import { pageview } from '@/utils/gtag';
-import Provider from '@/components/Provider';
+import AppProvider from '@/components/AppProvider';
 
 Sentry.init({
   enabled: (process.env.SENTRY_ENVIRONMENT ?? '') !== '',
@@ -29,7 +29,7 @@ const App = ({ Component, pageProps, err }: AppProps & { err: Error }) => {
   const modifiedPageProps = { ...pageProps, err };
 
   return (
-    <Provider>
+    <AppProvider>
       <Head>
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link
@@ -38,7 +38,7 @@ const App = ({ Component, pageProps, err }: AppProps & { err: Error }) => {
         />
       </Head>
       <Component {...modifiedPageProps} />
-    </Provider>
+    </AppProvider>
   );
 };
 

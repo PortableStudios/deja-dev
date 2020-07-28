@@ -4,9 +4,9 @@ import { withA11y } from '@storybook/addon-a11y';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withScreenshot } from 'storycap';
 
-import Provider from '@/components/Provider';
+import AppProvider from '@/components/AppProvider';
 
-addDecorator((storyFn) => <Provider>{storyFn()}</Provider>);
+addDecorator((storyFn) => <AppProvider>{storyFn()}</AppProvider>);
 addDecorator(withA11y);
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 addDecorator(withScreenshot as () => any);

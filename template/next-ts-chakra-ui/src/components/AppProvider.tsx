@@ -4,7 +4,7 @@ import { Global, css } from '@emotion/core';
 
 import theme from '@/utils/theme';
 
-const Provider: React.FC = ({ children }) => {
+const AppProvider: React.FC = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <CSSReset />
@@ -26,4 +26,4 @@ const Provider: React.FC = ({ children }) => {
   );
 };
 
-export default Provider;
+export default AppProvider;
