@@ -9,7 +9,7 @@ type Props = {
 } & FlexProps;
 
 const Home: React.FC<Props> = ({ timestamp, children, ...rest }) => {
-  const date = new Date(timestamp).toLocaleString();
+  const date = new Date(timestamp).toISOString();
   return (
     <Page {...rest}>
       <Stack marginX="auto" padding={4} spacing={4}>
