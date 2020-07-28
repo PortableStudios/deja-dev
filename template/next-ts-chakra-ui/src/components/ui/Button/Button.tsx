@@ -51,7 +51,7 @@ const Button = React.forwardRef<HTMLElement, Props>(
         position="relative"
         textDecoration="none"
         transition="0.3s background-color"
-        width="100%"
+        width="auto"
         _hover={{
           backgroundColor: hoverBackgroundColor,
         }}
