@@ -18,7 +18,7 @@ const Index: NextPage<Props> = ({ timestamp }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const timestamp = new Date().getTime();
   return {
     props: { timestamp },
