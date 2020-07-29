@@ -1,17 +1,21 @@
-const superb = require('superb')
+const superb = require('superb');
 
 const STACKS = [
   {
-    name: 'Front end',
-    value: 'FE'
+    name: 'Front end (Theme UI)',
+    value: 'FETHEME',
+  },
+  {
+    name: 'Front end (Chakra UI)',
+    value: 'FECHAKRA',
   },
   {
     name: 'API (coming soon)',
-    value: 'API'
+    value: 'API',
   },
   {
     name: 'Fullstack (coming soon)',
-    value: 'FS'
+    value: 'FS',
   },
 ];
 
@@ -22,26 +26,26 @@ module.exports = {
         name: 'meta.name',
         message: 'What is the name of the new project',
         default: this.outFolder,
-        filter: val => val.toLowerCase()
+        filter: (val) => val.toLowerCase(),
       },
       {
         name: 'meta.description',
         message: 'How would you describe the new project',
-        default: `my ${superb()} project`
+        default: `my ${superb()} project`,
       },
       {
         name: 'meta.author',
         message: 'What is your email?',
         default: this.gitUser.email,
-        store: true
+        store: true,
       },
       {
         name: 'stack.type',
         message: 'What is your stack?',
         type: 'list',
         choices: STACKS,
-      }
-    ]
+      },
+    ];
   },
   actions() {
     const { meta, stack } = this.answers;
@@ -51,14 +55,20 @@ module.exports = {
       {
         type: 'add',
         files: '**',
-        templateDir: './template/common'
+        templateDir: './template/common',
       },
       // Copy specific stacks based on answers
       {
         type: 'add',
         files: '**',
         templateDir: './template/next-ts-theme-ui',
-        when: () => ['FE'].includes(stack.type),
+        when: () => ['FETHEME'].includes(stack.type),
+      },
+      {
+        type: 'add',
+        files: '**',
+        templateDir: './template/next-ts-chakra-ui',
+        when: () => ['FECHAKRA'].includes(stack.type),
       },
       // Update package contents with answers
       {
@@ -66,18 +76,18 @@ module.exports = {
         files: 'package.json',
         handler(data) {
           return {
-            ...data,
             name: meta.name,
             description: meta.description,
-            author: `<${meta.author}>`
-          }
-        }
-      }
-    ].filter(action => !action.when || action.when());
+            author: `<${meta.author}>`,
+            ...data,
+          };
+        },
+      },
+    ].filter((action) => !action.when || action.when());
   },
   async completed() {
-    this.gitInit()
-    await this.npmInstall()
-    this.showProjectTips()
-  }
-}
+    this.gitInit();
+    await this.npmInstall();
+    this.showProjectTips();
+  },
+};

@@ -4,47 +4,61 @@
 
 ## What ☝
 
-An attempt to document the evolution of stacks I use on projects. Rather than my normal copy+paste+delete as required. This generator will scaffold out starting points for various stacks.
+Based on Lee Briggs' original [`deja-dev`](https://github.com/theleebriggs/deja-dev) tool,
+the purpose of this scaffolding tool is to enable us to painlessly skip the boilerplate
+and start working on the real meat of our projects as fast as possible.
 
 Built using the [SAO](https://github.com/saojs/sao) framework.
-
-## Stacks ⚡
-
-- Front end
-  - NextJS
-  - Theme UI
-- API (coming soon)
-- Fullstack (coming soon)
 
 ## Usage 🚀
 
 ```bash
-npx sao theleebriggs/deja-dev -u my-project
+npx sao PortableStudios/deja-dev -u my-project
 ```
 
-## TODO 💅
+## Stacks ⚡
 
-### Templates
+### Frontend
 
-- Common
-  - [x] LICENSE
-  - [x] .gitignore
-  - [x] .gitattributes
-  - [x] .editorconfig
-  - [x] .nvmrc
+- Next.js, with Theme UI
+- Next.js, with Chakra UI
 
-- FE App
-  - [x] NextJS
-  - [x] Typescript
-  - [ ] Styled-Components
-  - [ ] ThemeUI
-  - [ ] Linting (Stylelint?)
-  - [ ] Prettier
-  - [ ] .env files
-  - [ ] react-testing-lib
-  - [ ] Cypress
-  - [ ] Storybook
+### API
 
-## License
+- NestJS (coming soon)
 
-MIT &copy; [theleebriggs](github.com/theleebriggs)
+## Included
+
+### Common
+
+- .gitignore
+- .gitattributes
+- .editorconfig
+- .nvmrc
+
+### Next.js, with Theme UI
+
+- Next.js framework
+- TypeScript support
+- ESLint
+- Prettier
+- TODO: Theme UI
+
+(See [`README.md`](./template/next-ts-theme-ui/README.md) for more info)
+
+### Next.js, with Chakra UI
+
+- Next.js framework
+- TypeScript support
+- Chakra UI
+- Storybook
+- ESLint
+- Prettier
+- Jest, with React Testing Library
+- Cypress, with Cypress Testing Library
+- Third-party integrations
+  - Sentry
+  - Google Analytics
+- Various additional features and code examples
+
+(See [`README.md`](./template/next-ts-chakra-ui/README.md) for more info)
