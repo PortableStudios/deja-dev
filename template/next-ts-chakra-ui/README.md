@@ -71,16 +71,18 @@ The following features were included in this project by the [`deja-dev`](https:/
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Documentation](https://nextjs.org/docs) - learn about Next.js features and API
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial
+- [Awesome Next.js](https://github.com/unicodeveloper/awesome-nextjs) - community curated list of resources
+- [GitHub](https://github.com/vercel/next.js/)
 
 ### Chakra UI
 
 To learn more about Chakra UI, take a look at the following resources:
 
-- [Documentation](https://chakra-ui.com/getting-started)
-- [Storybook](https://chakra-ui.netlify.app/)
-- [GitHub Repository](https://github.com/chakra-ui/chakra-ui/)
+- [Documentation](https://chakra-ui.com/getting-started) - learn about Chakra UI features and API
+- [Storybook](https://chakra-ui.netlify.app/) - preview the 40+ components provided by Chakra UI, with examples
+- [GitHub](https://github.com/chakra-ui/chakra-ui/)
 
 ## Commands
 
