@@ -52,6 +52,7 @@ npx sao PortableStudios/deja-dev -u my-project
 - TypeScript support
 - Chakra UI
 - Storybook
+- Plop
 - ESLint
 - Prettier
 - Jest, with React Testing Library
